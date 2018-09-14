@@ -1,0 +1,141 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+p, h1, h2, h3, h4, h5, h6, ol, ul {
+  margin: 16px 0 0 0;
+}
+
+section {
+  margin: 16px 0 0 0;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: -1px 15px 0 15px;
+  max-width: none;
+  padding: 1px 1px 16px 1px;
+}
+
+@media screen and (min-width: 1246px) {
+  .container {
+    margin: -1px auto 0 auto;
+    max-width: 1200px;
+  }
+}
+
+.green {
+  color: white;
+  background: #00884b;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.container {
+  margin: -1px 15px -1px 15px;
+  padding: 1px 1px 1px 1px;
+}
+
+header h1 a {
+  color: black;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1246px) {
+  header.container {
+    margin: -1px auto -1px auto;
+    max-width: 1200px;
+  }
+}
+
+header h1 {
+  font-weight: 900;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  font-size: 16px;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  line-height: 1.48;
+  border: 0;
+}
+
+input[type="submit"], a {
+  color: #2d74da;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+textarea {
+  height: 200px;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+}
+
+.errors {
+  color: #e62325;
+}
+
+.inline {
+  display: inline;
+}
+
+input[type="submit"].red {
+  color: #e62325;
+}

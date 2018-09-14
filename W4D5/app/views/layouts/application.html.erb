@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W4D4</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet"
+    >
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="container">
+      <h1><a href="<%= bands_url %>">Music App</a></h1>
+      <aside>
+        <% if logged_in? %>
+          <%= current_user.email %>
+          <%= delete_button name: "Sign out", red: false, action: session_url %>
+        <% else %>
+          <a href="<%= new_session_url %>">Sign in</a>
+        <% end %>
+      </aside>
+    </header>
+    <main class="container">
+      <%= yield %>
+    </main>
+  </body>
+</html>
